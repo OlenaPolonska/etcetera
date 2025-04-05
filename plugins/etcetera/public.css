@@ -1,0 +1,142 @@
+:root {
+  --theme-blue: #53f;
+}
+
+.etcetera-form {
+	display: flex;
+}
+
+.freeze-while-load {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.etcetera-form .acf-form-submit input {
+	padding: 20px;
+}
+
+.etcetera-form .acf-label {
+	text-align: center;
+}
+
+.etcetera-form .acf-form-fields {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.etcetera-form .acf-range-wrap {
+	display: flex;
+	justify-content: center;
+}
+
+.etcetera-form .acf-range-wrap [type=number] {
+	width: 50px !important;
+}
+
+.etcetera-form .acf-radio-list {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	list-style: none;
+	padding: 10px;	
+	border: 1px solid var(--theme-blue);
+	border-radius: 3px;
+}
+
+.etcetera-form .acf-radio-list label {
+	margin: 0;
+}
+
+.etcetera-form .acf-radio-list [type=radio] {
+	margin-right: 5px;
+}
+
+.etcetera-form .acf-field:not(.acf-field-text) {
+	order: 2;
+}
+
+.etcetera-form .acf-field-text input {
+	width: 100%;
+}
+
+.etcetera-form .acf-field-text[data-name='name'],
+.etcetera-form .acf-field-text[data-name='location'] {
+	flex-basis: 45%;
+	flex-grow: 0;
+}
+
+.etcetera-form .acf-field[data-name='type'] .acf-radio-list {
+	flex-direction: column;
+}
+
+.etcetera-form .acf-field[data-name='environmental'] {
+	max-width: 100px;
+}
+
+.etcetera-form .acf-field[data-name='environmental'] .acf-input {
+	text-align: center;
+}
+
+.etcetera-real-estate-container ul {
+	list-style: none;
+	padding: 0;
+}
+
+.etcetera-real-estate-container li {
+	display: flex;
+	gap: 10px;
+	margin: 20px 0;
+}
+
+.etcetera-real-estate-container .read-more,
+.etcetera-real-estate-container .load-more {
+	background: var(--theme-blue);
+	color: #FFF;
+	border-radius: 5px;
+	border: 1px solid var(--theme-blue);
+	padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.etcetera-real-estate-container .load-more {
+	margin: 0 auto;
+    display: block;
+    padding: 10px 50px;
+}
+
+.etcetera-real-estate-container .read-more:hover,
+.etcetera-real-estate-container .load-more:hover {
+	background: none;
+	color: var(--theme-blue);
+	text-decoration: none;
+}
+
+.etcetera-real-estate-container img {
+	object-fit: contain;
+}
+
+[name="acf[square]"] {
+	width: 100px;
+}
+
+@media (max-width: 900px) {	
+	.etcetera-form,
+	.etcetera-form .acf-form-fields {
+		flex-direction: column;
+	}
+	
+	.etcetera-form .acf-form-submit input {
+		width: 100%;
+	}
+	
+	.etcetera-form .acf-field[data-name='environmental'] {
+		width: 100%;
+		max-width: none;
+	}
+
+	[name="acf[square]"] {
+		width: 100%;
+	}
+}
