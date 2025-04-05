@@ -24,8 +24,8 @@ defined( 'ABSPATH' ) || exit;
 				$location = intval( get_field('building') );
 				$location_link = get_permalink( $location );
 				$location_name = esc_textarea( get_field( 'name', $location ) );
-// 			echo '<pre>'.print_r($location, true).'</pre>';
-				echo "<i class='fa-solid fa-building'></i> " . esc_html__( 'Is located here: ', 'etc' ) . "<a href='$location_link'>$location_name</a>" 
+
+			echo "<i class='fa-solid fa-building'></i> " . esc_html__( 'Is located here: ', 'etc' ) . "<a href='$location_link'>$location_name</a>" 
 			?>
 		</div>
 	</header>

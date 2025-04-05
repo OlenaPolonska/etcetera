@@ -35,15 +35,6 @@ function etcetera_get_stars( $number ) {
 	return implode( '', $stars );
 }
 
-// add_action( 'after_setup_theme', function(){
-// 	unregister_sidebar('right-sidebar');
-// 	unregister_sidebar('left-sidebar');
-// 	unregister_sidebar('hero');
-// 	unregister_sidebar('herocanvas');
-// 	unregister_sidebar('statichero');
-// 	unregister_sidebar('footerfull');
-// } );
-
 add_action( 'widgets_init', function() {	
 	register_sidebar(
 		array(
